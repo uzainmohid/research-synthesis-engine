@@ -1,0 +1,175 @@
+{
+  "original_query": "How does quantum computing affect cryptography?",
+  "log": [
+    "[2026-07-30T05:40:25.510027+00:00] Starting pipeline for: How does quantum computing affect cryptography?",
+    "[2026-07-30T05:40:29.091648+00:00] Parsed into 3 sub-questions: ['What cryptographic systems are vulnerable to quantum computers?', \"How do quantum algorithms like Shor's and Grover's affect different types of cryptography?\", 'What are the current approaches to post-quantum cryptography?']",
+    "[2026-07-30T05:40:29.091806+00:00] Fetching 'What cryptographic systems are vulnerable to quantum computers?' from wikipedia...",
+    "[2026-07-30T05:40:32.160702+00:00]   -> wikipedia: VALID (624 chars)",
+    "[2026-07-30T05:40:32.160807+00:00] Fetching 'What cryptographic systems are vulnerable to quantum computers?' from web_search...",
+    "[2026-07-30T05:40:34.619740+00:00]   -> web_search: VALID (1919 chars)",
+    "[2026-07-30T05:40:34.619889+00:00] Fetching 'What cryptographic systems are vulnerable to quantum computers?' from arxiv...",
+    "[2026-07-30T05:40:36.562766+00:00]   -> arxiv: VALID (3870 chars)",
+    "[2026-07-30T05:40:36.562869+00:00] Sub-query 'What cryptographic systems are vulnerable to quantum computers?' complete: 3/3 sources valid.",
+    "[2026-07-30T05:40:36.562946+00:00] Fetching 'How do quantum algorithms like Shor's and Grover's affect different types of cryptography?' from wikipedia...",
+    "[2026-07-30T05:40:38.918738+00:00]   -> wikipedia: VALID (297 chars)",
+    "[2026-07-30T05:40:38.918842+00:00] Fetching 'How do quantum algorithms like Shor's and Grover's affect different types of cryptography?' from web_search...",
+    "[2026-07-30T05:40:42.073387+00:00]   -> web_search: VALID (1967 chars)",
+    "[2026-07-30T05:40:42.073526+00:00] Fetching 'How do quantum algorithms like Shor's and Grover's affect different types of cryptography?' from arxiv...",
+    "[2026-07-30T05:40:43.990568+00:00]   -> arxiv: VALID (3577 chars)",
+    "[2026-07-30T05:40:43.990670+00:00] Sub-query 'How do quantum algorithms like Shor's and Grover's affect different types of cryptography?' complete: 3/3 sources valid.",
+    "[2026-07-30T05:40:43.990782+00:00] Fetching 'What are the current approaches to post-quantum cryptography?' from wikipedia...",
+    "[2026-07-30T05:40:45.983050+00:00]   -> wikipedia: VALID (624 chars)",
+    "[2026-07-30T05:40:45.983160+00:00] Fetching 'What are the current approaches to post-quantum cryptography?' from web_search...",
+    "[2026-07-30T05:40:48.336863+00:00]   -> web_search: VALID (1978 chars)",
+    "[2026-07-30T05:40:48.336945+00:00] Fetching 'What are the current approaches to post-quantum cryptography?' from arxiv...",
+    "[2026-07-30T05:40:49.771131+00:00]   -> arxiv: VALID (3511 chars)",
+    "[2026-07-30T05:40:49.771232+00:00] Sub-query 'What are the current approaches to post-quantum cryptography?' complete: 3/3 sources valid.",
+    "[2026-07-30T05:40:49.771334+00:00] Pipeline run complete."
+  ],
+  "sub_query_results": [
+    {
+      "sub_query": "What cryptographic systems are vulnerable to quantum computers?",
+      "source_results": [
+        {
+          "source_name": "wikipedia",
+          "query": "What cryptographic systems are vulnerable to quantum computers?",
+          "raw_content": "Post-quantum cryptography (PQC), sometimes referred to as quantum-proof, quantum-safe, or quantum-resistant, is the development of cryptographic algorithms that are currently thought, but not proven, to be secure against a cryptanalytic attack by a quantum computer. Most widely used public-key algorithms rely on the difficulty of one of three mathematical problems: the integer factorization problem, the discrete logarithm problem, or the elliptic-curve discrete logarithm problem. All of these problems could be easily solved on a sufficiently powerful quantum computer running Shor's algorithm or possibly alternatives.",
+          "timestamp": "2026-07-30T05:40:29.091910+00:00",
+          "validation_status": "valid",
+          "validation_reason": "",
+          "url": "https://en.wikipedia.org/wiki/Post-quantum_cryptography",
+          "metadata": {
+            "title": "Post-quantum cryptography"
+          }
+        },
+        {
+          "source_name": "web_search",
+          "query": "What cryptographic systems are vulnerable to quantum computers?",
+          "raw_content": "8 Quantum Computing Cybersecurity Risks + How to Prepare: Learn the top quantum computing cybersecurity risks, including broken encryption, harvest-now-decrypt-later attacks, digital signature forgery, IAM compromise, and how to prepare with PQC, cryptographic inventory, and crypto-agility.\n\nHow Quantum Computing Affects Cryptography: The table illustrates that the quantum threat is highly asymmetric. Public-key cryptography faces an existential challenge, while symmetric encryption and hash functions require only modest adjustments to remain secure. Which Cryptographic Systems Are Vulnerable to Quantum Attacks? Not all encryption is equally at risk from quantum computers. The threat concentrates on specific algorithms and ...\n\nQuantum Computing Threats to Traditional Cryptographic Systems: The rise of quantum computing heralds a paradigm shift in computational power, promising drug discovery and climate modeling breakthroughs. However, this technological leap also poses an existential threat to the cryptographic systems that underpin modern digital security. As nations and corporations accelerate quantum research, cybersecurity experts warn that traditional encryption methods ...\n\nQuantum computing and cybersecurity: a rigorous systematic ... - Springer: This systematic review examines the transformative impact of quantum computing (QC) on cybersecurity by analysing peer-reviewed literature published between 2019 and 2024. The study identifies the most pressing emerging threats, particularly the vulnerability of classical cryptographic systems to quantum algorithms such as Shor's and Grover's. It assesses the current state of post-quantum ...\n\nHow Quantum Computing Will Upend Cybersecurity | BCG: Current cryptographic standards could soon be vulnerable to attacks from quantum computers. To protect critical systems, companies should begin the transition to post-quantum cryptography now.",
+          "timestamp": "2026-07-30T05:40:32.160864+00:00",
+          "validation_status": "valid",
+          "validation_reason": "",
+          "url": "https://www.paloaltonetworks.com/cyberpedia/what-is-quantum-computings-threat-to-cybersecurity",
+          "metadata": {
+            "result_count": 5,
+            "urls": [
+              "https://www.paloaltonetworks.com/cyberpedia/what-is-quantum-computings-threat-to-cybersecurity",
+              "https://thequantuminsider.com/2026/04/06/how-quantum-computing-affects-cryptography/",
+              "https://cybersecuritynews.com/quantum-computing-threats/",
+              "https://link.springer.com/article/10.1007/s42452-025-07322-5",
+              "https://www.bcg.com/publications/2025/how-quantum-computing-will-upend-cybersecurity"
+            ]
+          }
+        },
+        {
+          "source_name": "arxiv",
+          "query": "What cryptographic systems are vulnerable to quantum computers?",
+          "raw_content": "Title: Tianyan: Cloud services with quantum advantage\nPublished: 2025-12-11T10:23:39Z\nSummary: Tianyan Quantum Cloud Platform offers cloud services demonstrating quantum advantage capabilities with a Zuchongzhi 3.0-like superconducting quantum processor. This cloud-accessible superconducting quantum prototype, named Tianyan-287, features 105 qubits and achieves high operational fidelities, with single-qubit gates, two-qubit gates, and readout fidelity at 99.90%, 99.56%, 98.7%, respectively. For a specific benchmark task involving random circuit sampling on a 74-qubit system over 24 cycles, the platform completes one million samples in just 18.4 minutes. In contrast, state-of-the-art classical supercomputers would require approximately 16,000 years to complete the equivalent calculation. To facilitate this, the platform provides access via Cqlib, an open-source SDK designed for working with quantum systems at the level of extended quantum circuits, operators, and primitives. The cloud service aims to democratize access to high-performance quantum hardware, enabling the community to validate and explore practical quantum advantages.\nLink: http://arxiv.org/abs/2512.10504v2\n\n---\n\nTitle: Multi-partite quantum cryptographic protocols with noisy GHZ states\nPublished: 2004-04-23T04:39:30Z\nSummary: We propose a wide class of distillation schemes for multi-partite entangled states that are CSS-states. Our proposal provides not only superior efficiency, but also new insights on the connection between CSS-states and bipartite graph states. We then apply our distillation schemes to the tri-partite case for three cryptographic tasks--namely, (a) conference key agreement, (b) quantum sharing of classical secrets and (c) third-man cryptography. Moreover, we construct ``prepare-and-measure'' protocols for the above three cryptographic tasks which can be implemented with the generation of only a single entangled pair at a time. This gives significant simplification over previous experimental implementations which require two entangled pairs generated simultaneously. We also study the yields of those protocols and the threshold values of the fidelity above which the protocols can function securely. Rather surprisingly, our protocols will function securely even when the initial state does not violate the standard Bell-inequalities for GHZ states.\nLink: http://arxiv.org/abs/quant-ph/0404133v4\n\n---\n\nTitle: Locality of dynamics in general harmonic quantum systems\nPublished: 2008-03-06T15:29:45Z\nSummary: The Lieb-Robinson theorem states that locality is approximately preserved in the dynamics of quantum lattice systems. Whenever one has finite-dimensional constituents, observables evolving in time under a local Hamiltonian will essentially grow linearly in their support, up to exponentially suppressed corrections. In this work, we formulate Lieb-Robinson bounds for general harmonic systems on general lattices, for which the constituents are infinite-dimensional, as systems representing discrete versions of free fields or the harmonic approximation to the Bose-Hubbard model. We consider both local interactions as well as infinite-ranged interactions, showing how corrections to locality are inherited from the locality of the Hamiltonian: Local interactions result in stronger than exponentially suppressed corrections, while non-local algebraic interactions result in algebraic suppression. We derive bounds for canonical operators, Weyl operators and outline generalization to arbitrary operators. As an example, we discuss the Klein-Gordon field, and see how the approximate locality in the lattice model becomes the exact causality in the field limit. We discuss the applicability of these results to quenched lattice systems far from equilibrium, and the dynamics of quantum phase transitions.\nLink: http://arxiv.org/abs/0803.0890v2",
+          "timestamp": "2026-07-30T05:40:34.620017+00:00",
+          "validation_status": "valid",
+          "validation_reason": "",
+          "url": "http://arxiv.org/abs/2512.10504v2",
+          "metadata": {
+            "paper_count": 3
+          }
+        }
+      ]
+    },
+    {
+      "sub_query": "How do quantum algorithms like Shor's and Grover's affect different types of cryptography?",
+      "source_results": [
+        {
+          "source_name": "wikipedia",
+          "query": "How do quantum algorithms like Shor's and Grover's affect different types of cryptography?",
+          "raw_content": "In quantum computing and specifically the quantum circuit model of computation, a quantum logic gate is a basic quantum circuit operating on a small number of qubits. Quantum logic gates are the building blocks of quantum circuits, like classical logic gates are for conventional digital circuits.",
+          "timestamp": "2026-07-30T05:40:36.563014+00:00",
+          "validation_status": "valid",
+          "validation_reason": "",
+          "url": "https://en.wikipedia.org/wiki/Quantum_logic_gate",
+          "metadata": {
+            "title": "Quantum logic gate"
+          }
+        },
+        {
+          "source_name": "web_search",
+          "query": "How do quantum algorithms like Shor's and Grover's affect different types of cryptography?",
+          "raw_content": "Shor's and Grover's algorithms: Quantum threats to encryption | Fortinet: Two quantum algorithms, in particular, pose a significant threat to modern cryptographic systems: Shor’s algorithm and Grover’s algorithm. Shor’s algorithm efficiently factors large numbers and computes discrete logarithms, which form ...\n\nHow Quantum Computing Affects Cryptography: April 6, 2026 - While Shor’s algorithm provides an exponential speedup (turning infeasible problems into tractable ones), Grover’s algorithm provides only a quadratic speedup. This means that doubling the key length restores security against quantum attacks.\n\nQuantum Cryptanalysis: Breaking Classical Encryption with Shor’s and Grover’s: multiple states simultaneously, enabling quantum algorithms to solve certain · problems exponentially faster than their classical counterparts. Notably, Shor’s · algorithm and Grover’s algorithm have shown the potential to compromise both · asymmetric and symmetric cryptographic systems, respectively.\n\nA Comparative Study of Classical and Post-Quantum Cryptographic Algorithms in the Era of Quantum Computing: June 6, 2025 - It enables a quadratic speed-up in solving unstructured search problems, significantly reducing the time needed for brute-force key searches. Unlike Shor’s algorithm, which threatens asymmetric cryptography, Grover’s algorithm impacts symmetric algorithms and cryptographic hash functions.\n\nGrover’s Algorithm and Its Impact on Cybersecurity: September 24, 2025 - Grover’s vs Shor’s Algorithm: Shor’s algorithm (discovered by Peter Shor in 1994) is a quantum algorithm for factoring large integers and computing discrete logarithms in polynomial time – an exponential speedup over the best-known classical algorithms for those problems. Shor’s algorithm is the primary threat to asymmetric cryptography (like RSA, ECC, Diffie-Hellman) because those systems rely on the hardness of factoring or discrete log, which Shor’s can solve efficiently.",
+          "timestamp": "2026-07-30T05:40:38.918915+00:00",
+          "validation_status": "valid",
+          "validation_reason": "",
+          "url": "https://www.fortinet.com/resources/cyberglossary/shors-grovers-algorithms",
+          "metadata": {
+            "result_count": 5,
+            "urls": [
+              "https://www.fortinet.com/resources/cyberglossary/shors-grovers-algorithms",
+              "https://thequantuminsider.com/2026/04/06/how-quantum-computing-affects-cryptography/",
+              "https://advance.sagepub.com/users/885856/articles/1285068/master/file/data/Quantum+Cryptanalysis+Breaking+Classical+Encryption+with+Shor’s+and+Grover’s+Algorithms/Quantum+Cryptanalysis+Breaking+Classical+Encryption+with+Shor’s+and+Grover’s+Algorithms.pdf",
+              "https://arxiv.org/html/2508.00832v1",
+              "https://postquantum.com/post-quantum/grovers-algorithm/"
+            ]
+          }
+        },
+        {
+          "source_name": "arxiv",
+          "query": "How do quantum algorithms like Shor's and Grover's affect different types of cryptography?",
+          "raw_content": "Title: From Period Finding to Lattice Sampling: Experimental Insights into Shor's and Regev's Factoring Algorithms\nPublished: 2026-06-16T08:06:38Z\nSummary: Quantum algorithms for integer factorization represent one of the most prominent applications of quantum computation, with far-reaching implications for modern cryptography. While Shor's algorithm provides a polynomial-time solution in the ideal quantum model, its practical implementation is severely constrained by the limitations of current noisy intermediate-scale quantum (NISQ) hardware. These constraints have motivated the exploration of alternative factoring algorithms with different structural and resource trade-offs.\n  In this work, we present an experimental study of Regev's quantum factoring algorithm, implemented on real quantum hardware, and compare its behavior with that of Shor's algorithm under analogous conditions. Focusing on the case N = 15, we execute both algorithms on the QMIO quantum computer at the Centro de Supercomputacion de Galicia (CESGA) and contrast the results with one of IBM's open-access quantum computers and ideal simulations. This parallel execution enables a low-level comparison of the two algorithms, highlighting how their respective quantum implementations interact with hardware noise, limited circuit depth, and finite sampling.\n  Our analysis emphasizes the different ways in which Shor's and Regev's algorithms encode arithmetic structure into quantum states through Fourier sampling in one and higher dimensions, respectively, and how these differences manifest in experimental outcomes. Although neither algorithm demonstrates a practical advantage in the small N regime, the results provide insight into their relative robustness and failure modes on contemporary quantum devices. This study illustrates the value of experimental benchmarking of alternative quantum factoring algorithms as a means of understanding the practical implications of algorithmic design choices in the NISQ era.\nLink: http://arxiv.org/abs/2606.17647v1\n\n---\n\nTitle: Quantum Entanglement involved in Grover's and Shor's algorithms: the four-qubit case\nPublished: 2018-11-21T14:27:27Z\nSummary: In this paper, we study the nature of entanglement in quantum Grover's and Shor's algorithms. So far, the authors who have been interested in this problem have approached the question quantitatively by introducing entanglement measures (numerical ones most of the time). One can ask a different question: what about a qualitative measure of entanglement ? In other words, we try to find what are the different entanglement SLOCC classes that can be generated by these two algorithms. We treat in this article the case of pure four-qubit systems.\nLink: http://arxiv.org/abs/1811.08894v2\n\n---\n\nTitle: Synthesis of Quantum Vector Databases Based on Grovers Algorithm\nPublished: 2023-06-27T08:34:15Z\nSummary: This paper describes a method for using Grovers algorithm to create a quantum vector database, the database stores embeddings based on Controlled-S gates, which represent a binary numerical value. This value represents the embeddings value. The process of creating meaningful embeddings is handled by a classical computer and the search process is handled by the quantum computer. This search approach might be beneficial for a large enough database, or it could be seen as a very qubit-efficient (super dense) way for storing data on a quantum computer, since the proposed circuit stores many embeddings inside one quantum register simultaneously.\nLink: http://arxiv.org/abs/2306.15295v2",
+          "timestamp": "2026-07-30T05:40:42.073583+00:00",
+          "validation_status": "valid",
+          "validation_reason": "",
+          "url": "http://arxiv.org/abs/2606.17647v1",
+          "metadata": {
+            "paper_count": 3
+          }
+        }
+      ]
+    },
+    {
+      "sub_query": "What are the current approaches to post-quantum cryptography?",
+      "source_results": [
+        {
+          "source_name": "wikipedia",
+          "query": "What are the current approaches to post-quantum cryptography?",
+          "raw_content": "Post-quantum cryptography (PQC), sometimes referred to as quantum-proof, quantum-safe, or quantum-resistant, is the development of cryptographic algorithms that are currently thought, but not proven, to be secure against a cryptanalytic attack by a quantum computer. Most widely used public-key algorithms rely on the difficulty of one of three mathematical problems: the integer factorization problem, the discrete logarithm problem, or the elliptic-curve discrete logarithm problem. All of these problems could be easily solved on a sufficiently powerful quantum computer running Shor's algorithm or possibly alternatives.",
+          "timestamp": "2026-07-30T05:40:43.990909+00:00",
+          "validation_status": "valid",
+          "validation_reason": "",
+          "url": "https://en.wikipedia.org/wiki/Post-quantum_cryptography",
+          "metadata": {
+            "title": "Post-quantum cryptography"
+          }
+        },
+        {
+          "source_name": "web_search",
+          "query": "What are the current approaches to post-quantum cryptography?",
+          "raw_content": "Post-quantum cryptography - Wikipedia: Post-quantum cryptography Post-quantum cryptography (PQC), sometimes referred to as quantum-proof, quantum-safe, or quantum-resistant, is the development of cryptographic algorithms (usually public-key algorithms) that are currently thought, but not proven, to be secure against a cryptanalytic attack by a quantum computer. [1]\n\nWhat Is Post-Quantum Cryptography? | NIST: Why do we need post-quantum encryption, and h ow will PQC algorithms work? To stave off attacks by a quantum computer — if and when a cryptographically relevant one is built — the worldwide community must retire current encryption algorithms. Post-quantum encryption algorithms must be based on math problems that would be difficult for both conventional and quantum computers to solve. The ...\n\nPost-Quantum Cryptography | CSRC: NIST's Post-Quantum Cryptography (PQC) project leads the national and global effort to secure electronic information against the future threat of quantum computers—machines that may be years or decades away but could eventually break many of today's widely used cryptographic systems.\n\nExploring Post-Quantum Cryptography: Review and Directions for the ...: This paper presents a comprehensive review of Post-Quantum Cryptography (PQC) as a solution to protect digital systems in the quantum era. We provide an in-depth analysis of various quantum-resistant cryptographic algorithms, including lattice-based, code-based, hash-based, isogeny-based, and multivariate approaches.\n\nTransitioning to Post-Quantum Cryptography: Key Developments: The transition to post-quantum cryptography (PQC) has gained momentum amid advancements like NIST's standardization of quantum-resistant algorithms. Key developments include addressing implementation challenges, enhancing crypto-agility, and exploring hybrid approaches. However, performance issues, legacy system integration, and emerging threats highlight the complexity of ensuring digital ...",
+          "timestamp": "2026-07-30T05:40:45.983257+00:00",
+          "validation_status": "valid",
+          "validation_reason": "",
+          "url": "https://en.wikipedia.org/wiki/Post-quantum_cryptography",
+          "metadata": {
+            "result_count": 5,
+            "urls": [
+              "https://en.wikipedia.org/wiki/Post-quantum_cryptography",
+              "https://www.nist.gov/cybersecurity-and-privacy/what-post-quantum-cryptography",
+              "https://csrc.nist.gov/projects/post-quantum-cryptography",
+              "https://www.mdpi.com/2227-7080/12/12/241",
+              "https://thequantumspace.org/2025/05/26/transitioning-to-post-quantum-cryptography-key-developments/"
+            ]
+          }
+        },
+        {
+          "source_name": "arxiv",
+          "query": "What are the current approaches to post-quantum cryptography?",
+          "raw_content": "Title: A new spin on quantum cryptography: Avoiding trapdoors and embracing public keys\nPublished: 2011-09-15T01:20:54Z\nSummary: We give new arguments in support of \\emph{signed quantum key establishment}, where quantum cryptography is used in a public-key infrastructure that provides the required authentication. We also analyze more thoroughly than previous works the benefits that quantum key establishment protocols have over certain classical protocols, motivated in part by the various objections to quantum key establishment that are sometimes raised. Previous knowledge of quantum cryptography on the reader's part is not required for this article, as the definition of \"quantum key establishment\" that we use is an entirely classical and black-box characterization (one need only trust that protocols satisfying the definition exist).\nLink: http://arxiv.org/abs/1109.3235v1\n\n---\n\nTitle: From Pre-Quantum to Post-Quantum IoT Security: A Survey on Quantum-Resistant Cryptosystems for the Internet of Things\nPublished: 2024-02-01T17:22:48Z\nSummary: This article provides a survey on what can be called post-quantum IoT systems (IoT systems protected from the currently known quantum computing attacks): the main post-quantum cryptosystems and initiatives are reviewed, the most relevant IoT architectures and challenges are analyzed, and the expected future trends are indicated. Thus, this paper is aimed at providing a wide view of post-quantum IoT security and give useful guidelines to the future post-quantum IoT developers.\nLink: http://arxiv.org/abs/2402.00790v2\n\n---\n\nTitle: Measurement Study of Post-Quantum Readiness of Internet: 2026\nPublished: 2026-06-15T09:38:45Z\nSummary: The emergence of quantum computing presents a fundamental challenge to the security of current Internet communication systems. Transport Layer Security (TLS), which forms the backbone of secure web communication, predominantly relies on classical public-key cryptographic algorithms such as RSA and elliptic curve cryptography (ECC), both of which are susceptible to quantum attacks. This paper conducts a large scale empirical evaluation of post-quantum readiness across 32,011 domains, with a primary focus on real-world TLS deployments across diverse sectors by analysing negotiated TLS parameters, including protocol versions, cipher suites, key exchange mechanisms, and certificates. The results indicate that while modern protocols like TLS 1.3 and QUIC are gaining adoption, 15.70% of domains especially in critical sectors such as banking and government still rely on TLS 1.2.\n  Furthermore, 49.3% of domains support hybrid post-quantum key exchange mechanisms (e.g., MLKEM768 with X25519), whereas 50.7% continue to use classical key exchange, reflecting partial transition. Notably, 0% adoption of hybrid post-quantum certificates was observed, leaving the authentication layer vulnerable to quantum-enabled attacks such as certificate forgery. The findings reveal uneven adoption of post-quantum mechanisms across sectors, where technology driven platforms are advancing more rapidly than legacy-dependent infrastructures. Overall, the study highlights that achieving complete quantum resilience requires a coordinated transition not only in key exchange mechanisms but also in certificate infrastructures. Without such comprehensive migration, Internet communication systems remain vulnerable to long-term threats, including Harvest-Now-Decrypt-Later (HNDL) attacks.\nLink: http://arxiv.org/abs/2606.16473v1",
+          "timestamp": "2026-07-30T05:40:48.337011+00:00",
+          "validation_status": "valid",
+          "validation_reason": "",
+          "url": "http://arxiv.org/abs/1109.3235v1",
+          "metadata": {
+            "paper_count": 3
+          }
+        }
+      ]
+    }
+  ]
+}
