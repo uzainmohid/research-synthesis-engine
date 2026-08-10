@@ -1,0 +1,93 @@
+[
+  {
+    "id": "d6853259",
+    "question": "How does quantum computing affect cryptography?",
+    "status": "completed",
+    "report_path": "report_How_does_quantum_computing_affect_cryptography.docx",
+    "claims_path": "claims_How_does_quantum_computing_affect_cryptography.json",
+    "created_at": "2026-08-09T17:14:41.585343+00:00",
+    "completed_at": "2026-08-09T17:15:51.283201+00:00"
+  },
+  {
+    "id": "f42cec19",
+    "question": "How does quantum computing affect cryptography?",
+    "status": "failed",
+    "report_path": null,
+    "claims_path": null,
+    "created_at": "2026-08-10T06:36:27.157617+00:00",
+    "completed_at": null,
+    "failure_reason": "[Errno 13] Permission denied: 'report_How_does_quantum_computing_affect_cryptography.docx'"
+  },
+  {
+    "id": "a1b6b291",
+    "question": "How does quantum computing affect cryptography?",
+    "status": "completed",
+    "report_path": "report_How_does_quantum_computing_affect_cryptography.docx",
+    "claims_path": "claims_How_does_quantum_computing_affect_cryptography.json",
+    "created_at": "2026-08-10T06:39:59.414799+00:00",
+    "completed_at": "2026-08-10T06:41:06.374309+00:00"
+  },
+  {
+    "id": "f4d0bf05",
+    "question": "What are the health effects of intermittent fasting?",
+    "status": "completed",
+    "report_path": "report_What_are_the_health_effects_of_intermittent_fastin.docx",
+    "claims_path": "claims_What_are_the_health_effects_of_intermittent_fastin.json",
+    "created_at": "2026-08-10T07:04:38.416265+00:00",
+    "completed_at": "2026-08-10T07:05:39.342399+00:00"
+  },
+  {
+    "id": "936ed7fb",
+    "question": "What are the health effects of intermittent fasting?",
+    "status": "completed",
+    "report_path": "report_What_are_the_health_effects_of_intermittent_fastin.docx",
+    "claims_path": "claims_What_are_the_health_effects_of_intermittent_fastin.json",
+    "created_at": "2026-08-10T07:18:15.526591+00:00",
+    "completed_at": "2026-08-10T07:19:13.883650+00:00"
+  },
+  {
+    "id": "309608ae",
+    "question": "What caused the collapse of the Roman Empire?",
+    "status": "completed",
+    "report_path": "report_What_caused_the_collapse_of_the_Roman_Empire.docx",
+    "claims_path": "claims_What_caused_the_collapse_of_the_Roman_Empire.json",
+    "created_at": "2026-08-10T07:33:01.391980+00:00",
+    "completed_at": "2026-08-10T07:33:46.472485+00:00"
+  },
+  {
+    "id": "e0eb1b62",
+    "question": "What caused the collapse of the Roman Empire?",
+    "status": "completed",
+    "report_path": "report_What_caused_the_collapse_of_the_Roman_Empire.docx",
+    "claims_path": "claims_What_caused_the_collapse_of_the_Roman_Empire.json",
+    "created_at": "2026-08-10T07:36:55.918667+00:00",
+    "completed_at": "2026-08-10T07:38:05.590757+00:00"
+  },
+  {
+    "id": "41866360",
+    "question": "How do electric car batteries degrade over time?",
+    "status": "completed",
+    "report_path": "report_How_do_electric_car_batteries_degrade_over_time.docx",
+    "claims_path": "claims_How_do_electric_car_batteries_degrade_over_time.json",
+    "created_at": "2026-08-10T07:40:59.935643+00:00",
+    "completed_at": "2026-08-10T07:44:36.796194+00:00"
+  },
+  {
+    "id": "dda8abe1",
+    "question": "How do electric car batteries degrade over time?",
+    "status": "completed",
+    "report_path": "report_How_do_electric_car_batteries_degrade_over_time.docx",
+    "claims_path": "claims_How_do_electric_car_batteries_degrade_over_time.json",
+    "created_at": "2026-08-10T07:53:53.921736+00:00",
+    "completed_at": "2026-08-10T07:54:54.446818+00:00"
+  },
+  {
+    "id": "e943e6bf",
+    "question": "What is the theory of relativity?",
+    "status": "completed",
+    "report_path": "report_What_is_the_theory_of_relativity.docx",
+    "claims_path": "claims_What_is_the_theory_of_relativity.json",
+    "created_at": "2026-08-10T12:10:54.530583+00:00",
+    "completed_at": "2026-08-10T12:12:15.066316+00:00"
+  }
+]
