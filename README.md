@@ -1,4 +1,5 @@
-# Multi-Source Research Synthesis Engine
+# Multi-Source Research Synthesis Engine   
+# Deep Research & Auto-Report Generator week2/week3 project HOARDY AI
 
 A research automation pipeline that takes a complex question, decomposes it into sub-questions, gathers information from three independent sources (Wikipedia, general web search, and arXiv academic papers), cross-references the results, resolves contradictions between sources, and produces a structured markdown research report — complete with confidence ratings and full source provenance.
 
@@ -193,3 +194,223 @@ The `reports/` folder contains 8 generated research reports covering a range of 
 - ✅ Edge case testing proof (source-down simulation + a real unforced failure)
 - ✅ Conflict detection proof (4 real conflicts across 4 different queries)
 - ✅ This README
+
+# WEEK 3 Project --- 
+
+
+# Deep Research & Auto-Report Generator
+
+An AI research agent that takes a question, gathers evidence from 4+ independent sources, extracts atomic claims with full per-claim citations, scores each source's quality, and produces a structured, professionally formatted DOCX research report — with every finding traceable to its source, and every disagreement between sources documented rather than hidden.
+
+Built during Weeks 2–3 of my Hoardy AI internship. Started as a 3-source research synthesis engine (Week 2) and was extended into a citation-grade, 4-source deep research tool with claim-level attribution, quality scoring, and DOCX export (Week 3).
+
+---
+
+## What it does
+
+Give it a question like *"What caused the collapse of the Roman Empire?"* and it will:
+
+1. **Fan out to 4 sources in parallel** — Wikipedia, general web search, arXiv, and Semantic Scholar — each on its own thread
+2. **Validate every result** — checking it actually has content, and that it's genuinely relevant to the question (judged by an LLM, not just keyword matching)
+3. **Extract atomic claims** — each source's content is split into individual, citable factual statements, each bound to that exact source
+4. **Score source quality** — recency, domain/citation authority, and known-authorship checks, so every claim carries a 0.0–1.0 reliability score
+5. **Assemble a structured report** — Executive Summary, numbered Findings with inline `[1][2]` citations, a Conflicts & Gaps section (disagreements between sources are documented, never silently resolved by picking one), and a References list with full URLs
+6. **Export to DOCX** — a clean, professional document, including an appendix table of every extracted claim and its quality score
+7. **Track everything in a persistent research queue** — a JSON state file recording every question ever run, its status, and its output paths, so work isn't lost between sessions
+
+If a source fails — a timeout, a rate limit, irrelevant content — the pipeline logs it and keeps going, producing a complete report from whatever sources succeeded.
+
+---
+
+## Architecture
+
+```
+User Question
+    │
+    ▼
+┌─────────────────────────┐
+│   Question Validator       │  (run_deep_research.py)
+│   → rejects vague/empty     │
+│     questions before they   │
+│     enter the pipeline      │
+└──────────┬──────────────┘
+           ▼
+┌─────────────────────────────────────────────────────┐
+│              Parallel Fan-Out Fetcher                    │  (fanout_fetcher.py)
+│                                                            │
+│   ┌───────────┐ ┌──────────┐ ┌───────┐ ┌────────────┐    │
+│   │ Wikipedia │ │Web Search│ │ arXiv │ │  Semantic  │    │
+│   │  (REST)   │ │  (ddgs)  │ │(Atom) │ │  Scholar   │    │
+│   └─────┬─────┘ └────┬─────┘ └───┬───┘ └─────┬──────┘    │
+│         └────────────┼───────────┼───────────┘            │
+│                       ▼                                     │
+│         LLM-based relevance validation                      │
+│    (judges MEANING, not just shared keywords)                │
+└──────────────────────┬──────────────────────────────────┘
+                        ▼
+┌─────────────────────────────────┐
+│      Claim Extractor               │  (claim_extractor.py)
+│      DeepSeek Flash                 │
+│  → splits each valid source into    │
+│    2-4 atomic, citable claims        │
+│  → conflicting claims from different │
+│    sources are KEPT SEPARATE          │
+└──────────────┬────────────────────┘
+               ▼
+┌─────────────────────────────────┐
+│      Quality Scorer                │  (quality_scorer.py)
+│  → recency + authority + author-    │
+│    ship checks per claim's source    │
+└──────────────┬────────────────────┘
+               ▼
+┌─────────────────────────────────┐
+│      Report Assembler              │  (report_assembler.py)
+│      DeepSeek Flash                 │
+│  → Executive Summary                │
+│  → Findings with [1][2] citations    │
+│  → Conflicts & Gaps                  │
+│  → References (deterministic,        │
+│    built by code, not the LLM)        │
+└──────────────┬────────────────────┘
+               ▼
+┌─────────────────────────────────┐
+│      DOCX Exporter                 │  (docx_export.py)
+│  → clean formatted report +          │
+│    claims appendix table              │
+└─────────────────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────┐
+│      Research Queue                 │  (claim_schema.py)
+│  → persistent JSON state file        │
+│    tracking every question run        │
+└─────────────────────────────────┘
+```
+
+`run_deep_research.py` orchestrates all of this behind two commands:
+```bash
+python run_deep_research.py research "Your question here"
+python run_deep_research.py list
+```
+
+---
+
+## Scoring rules
+
+Every claim's `quality_score` (0.0–1.0) starts at a neutral 0.5 baseline, then:
+
+| Signal | Adjustment |
+|---|---|
+| Academic source (arXiv/Semantic Scholar) published within the last 2 years | **+0.25** |
+| Academic source older than 2 years | **−0.10** |
+| Source domain ends in `.edu` or `.gov` | **+0.25** |
+| Semantic Scholar paper with 10+ citations | **+0.25** (same bucket as domain authority, not additive with it) |
+| Wikipedia (collaborative, cross-checked, but not peer-reviewed) | **+0.10** |
+| No identifiable author/institution (e.g. a general web search result with no byline) | **−0.15** |
+
+Final score is clamped to `[0.0, 1.0]`.
+
+---
+
+## Key prompts
+
+**Claim extraction** (`claim_extractor.py`) — instructs the model to extract 2-4 atomic factual claims per source, explicitly forbidding it from softening or reconciling claims across sources: *"Extract claims exactly as the source states them — do not soften, average, or reconcile them with what other sources might say."*
+
+**Relevance judgment** (`fanout_fetcher.py`) — a lightweight LLM call per source: *"You judge whether a piece of text is genuinely relevant to a research question — i.e. whether it actually helps answer it, not just whether it shares some vocabulary."* This replaced an earlier keyword-overlap heuristic that produced false matches on generic shared words.
+
+**Report assembly** (`report_assembler.py`) — instructs the model to document disagreements rather than resolve them silently: *"For each case where two or more claims genuinely disagree... describe both claims with their citation numbers and note the disagreement explicitly — do NOT pick one as correct and drop the other."* Citation numbers themselves are assigned deterministically by code, not the LLM, so they always match the References list exactly.
+
+---
+
+## How it handles failure gracefully
+
+Every source fetch is wrapped so a failure never crashes the pipeline — it becomes a logged, structured result with `validation_status="failed"`, and the pipeline continues with whatever sources succeeded. This was proven under real conditions multiple times during testing, not just simulated:
+
+```
+Fetching from wikipedia...
+Fetching from web_search...
+Fetching from arxiv...
+Fetching from semantic_scholar...
+  -> arxiv: INVALID — Content did not overlap meaningfully with the question (relevance check failed)
+  -> wikipedia: VALID (619 chars)
+  -> web_search: VALID (1252 chars)
+  -> semantic_scholar: FAILED — HTTP 429 (rate limited)
+Fan-out complete: 2/4 sources valid.
+...
+✅ Done.
+   Total claims extracted: 8
+   Conflicts/gaps noted: 2
+```
+
+Two out of four sources failed here — one to a real external rate limit, one correctly rejected as off-topic — and the pipeline still produced a complete, cited, 8-claim report. See `graceful-failure-handling.png`.
+
+---
+
+## Challenges faced
+
+- **Wikipedia 404s on Week 2:** the original fetcher treated a full sub-question as a literal Wikipedia page title. Fixed by adding a search-first step to resolve the real article title.
+- **arXiv rate limiting:** arXiv's API requires a minimum gap between requests; rapid sequential calls triggered `HTTP 429`. Fixed with a global rate limiter and retry-with-backoff.
+- **Relevance false positives:** an early keyword-overlap relevance check let an unrelated AI/healthcare-systems paper pass for a diet/fasting question, because both mentioned the generic word "health." Replaced the entire approach with an LLM-based relevance judgment that evaluates actual meaning instead of shared vocabulary — this generalizes to any topic rather than needing a growing, hand-tuned stopword list.
+- **A real regression, caught and fixed:** an early version of the LLM relevance check capped the model's response at 5 tokens, which truncated its answer to nothing and caused every single source to be marked irrelevant. Fixed by giving the model room to respond and adding a safe fallback for empty responses — and this time verified with unit tests (mocked YES/NO/empty-response cases) before shipping, rather than shipping on reasoning alone.
+- **Semantic Scholar's shared public rate limit:** the unauthenticated tier is shared globally and fails unpredictably. The pipeline treats this as expected, logs it clearly, and continues with the other 3 sources — this is real, organic proof of graceful degradation, not a bug to hide.
+- **Query specificity:** added a lightweight, deterministic validator that rejects vague questions (e.g. "hi", "tell me about it") before they enter the pipeline, so the research queue only ever holds genuinely researchable questions.
+
+---
+
+## Project structure
+
+```
+research-synthesis-engine/
+├── schema.py                  # Week 2: SourceResult, SubQueryResult, PipelineResult
+├── config.py                  # Loads DEEPSEEK_API_KEY from .env
+├── test_wikipedia.py          # Source: Wikipedia (search + summary)
+├── test_web_search.py         # Source: general web (ddgs)
+├── test_arxiv.py               # Source: arXiv (rate-limited, retried)
+├── semantic_scholar_source.py  # Source: Semantic Scholar (citations, authors, year)
+├── claim_schema.py             # Week 3: Claim dataclass + persistent ResearchQueue
+├── fanout_fetcher.py            # Parallel 4-source fetch + LLM relevance validation
+├── claim_extractor.py           # Splits sources into atomic, cited claims
+├── quality_scorer.py            # Scores each claim's source quality
+├── report_assembler.py          # Executive summary, findings, conflicts, references
+├── docx_export.py                # Renders the final report to DOCX
+├── run_deep_research.py          # Main entry point + query validation + queue CLI
+├── requirements.txt
+├── .env.example
+└── reports/                      # Generated DOCX reports (9 sample questions)
+```
+
+---
+
+## How to run it
+
+```bash
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
+
+Create `.env` with your DeepSeek key:
+```
+DEEPSEEK_API_KEY=your_key_here
+```
+
+Run a question:
+```bash
+python run_deep_research.py research "What caused the collapse of the Roman Empire?"
+```
+
+Check the research queue:
+```bash
+python run_deep_research.py list
+```
+
+---
+
+## Deliverables
+
+- ✅ Working deep-research agent — answers questions from 4+ sources with per-claim citations
+- ✅ Exported DOCX report — `reports/report_What_caused_the_collapse_of_the_Roman_Empire.docx`
+- ✅ Citation trail — every finding maps to a numbered reference with a full source URL; conflicts documented, not hidden
+- ✅ Research queue — `research_queue.json`, showing 9 completed research tasks
+- ✅ This README — architecture, scoring rules, prompts, and challenges faced
+- ✅ Screenshots — see `/screenshots` for full pipeline runs, graceful failure handling, the exported report, and the research queue
