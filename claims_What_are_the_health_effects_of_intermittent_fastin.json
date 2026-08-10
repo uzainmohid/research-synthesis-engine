@@ -1,0 +1,42 @@
+[
+  {
+    "claim_id": "c5dd0f71",
+    "claim_text": "Intermittent fasting involves switching between fasting and eating on a regular schedule.",
+    "source_url": "https://www.hopkinsmedicine.org/health/expert-qa/intermittent-fasting-what-is-it-and-how-does-it-work",
+    "source_name": "web_search",
+    "source_type": "general_web",
+    "retrieved_at": "2026-08-10T07:18:15.528941+00:00",
+    "quality_score": 0.35,
+    "sub_topic": ""
+  },
+  {
+    "claim_id": "aaf266f0",
+    "claim_text": "Intermittent fasting could manage your weight or even some forms of disease through safe practices.",
+    "source_url": "https://www.hopkinsmedicine.org/health/expert-qa/intermittent-fasting-what-is-it-and-how-does-it-work",
+    "source_name": "web_search",
+    "source_type": "general_web",
+    "retrieved_at": "2026-08-10T07:18:15.528941+00:00",
+    "quality_score": 0.35,
+    "sub_topic": ""
+  },
+  {
+    "claim_id": "862ae9d2",
+    "claim_text": "Intermittent fasting can have a number of important long-term implications on health.",
+    "source_url": "https://www.hopkinsmedicine.org/health/expert-qa/intermittent-fasting-what-is-it-and-how-does-it-work",
+    "source_name": "web_search",
+    "source_type": "general_web",
+    "retrieved_at": "2026-08-10T07:18:15.528941+00:00",
+    "quality_score": 0.35,
+    "sub_topic": ""
+  },
+  {
+    "claim_id": "e4dc5dd2",
+    "claim_text": "Intermittent fasting has many health benefits including better heart health, improved brain function and longer life expectancy.",
+    "source_url": "https://www.hopkinsmedicine.org/health/expert-qa/intermittent-fasting-what-is-it-and-how-does-it-work",
+    "source_name": "web_search",
+    "source_type": "general_web",
+    "retrieved_at": "2026-08-10T07:18:15.528941+00:00",
+    "quality_score": 0.35,
+    "sub_topic": ""
+  }
+]

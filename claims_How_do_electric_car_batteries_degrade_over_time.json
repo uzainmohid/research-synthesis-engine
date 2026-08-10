@@ -1,0 +1,42 @@
+[
+  {
+    "claim_id": "d7d93823",
+    "claim_text": "Most electric car batteries will last for approximately 1,500 to 2,000 charge cycles.",
+    "source_url": "https://www.midtronics.com/blog/do-electric-car-ev-batteries-degrade-over-time/",
+    "source_name": "web_search",
+    "source_type": "general_web",
+    "retrieved_at": "2026-08-10T07:53:56.444537+00:00",
+    "quality_score": 0.35,
+    "sub_topic": ""
+  },
+  {
+    "claim_id": "65693edc",
+    "claim_text": "Electric car batteries rely on chemical reactions to generate the electrons that power the car's motor.",
+    "source_url": "https://www.midtronics.com/blog/do-electric-car-ev-batteries-degrade-over-time/",
+    "source_name": "web_search",
+    "source_type": "general_web",
+    "retrieved_at": "2026-08-10T07:53:56.444537+00:00",
+    "quality_score": 0.35,
+    "sub_topic": ""
+  },
+  {
+    "claim_id": "2ba2a363",
+    "claim_text": "Battery degradation is real, but it is not linear; the longer lasting a battery, the lower the degradation is over time.",
+    "source_url": "https://www.midtronics.com/blog/do-electric-car-ev-batteries-degrade-over-time/",
+    "source_name": "web_search",
+    "source_type": "general_web",
+    "retrieved_at": "2026-08-10T07:53:56.444537+00:00",
+    "quality_score": 0.35,
+    "sub_topic": ""
+  },
+  {
+    "claim_id": "6771627d",
+    "claim_text": "The government mandates EV manufacturers to warranty batteries for 8 years or 100,000 miles, while California extends that warranty to 10 years or 150,000 miles.",
+    "source_url": "https://www.midtronics.com/blog/do-electric-car-ev-batteries-degrade-over-time/",
+    "source_name": "web_search",
+    "source_type": "general_web",
+    "retrieved_at": "2026-08-10T07:53:56.444537+00:00",
+    "quality_score": 0.35,
+    "sub_topic": ""
+  }
+]

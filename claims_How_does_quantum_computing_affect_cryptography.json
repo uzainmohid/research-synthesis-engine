@@ -1,0 +1,62 @@
+[
+  {
+    "claim_id": "868b1496",
+    "claim_text": "Quantum cryptography exploits quantum-mechanical properties such as quantum entanglement, measurement disturbance, the no-cloning theorem, and superposition to perform encryption tasks.",
+    "source_url": "https://en.wikipedia.org/wiki/Quantum_cryptography",
+    "source_name": "wikipedia",
+    "source_type": "encyclopedia",
+    "retrieved_at": "2026-08-10T06:39:59.417031+00:00",
+    "quality_score": 0.6,
+    "sub_topic": ""
+  },
+  {
+    "claim_id": "8e91f860",
+    "claim_text": "Quantum encryption plays a crucial role in the secure processing, storage, and transmission of information.",
+    "source_url": "https://en.wikipedia.org/wiki/Quantum_cryptography",
+    "source_name": "wikipedia",
+    "source_type": "encyclopedia",
+    "retrieved_at": "2026-08-10T06:39:59.417031+00:00",
+    "quality_score": 0.6,
+    "sub_topic": ""
+  },
+  {
+    "claim_id": "08565344",
+    "claim_text": "Sufficiently powerful quantum computers can break widely used encryption systems including RSA, elliptic curve cryptography (ECC), and Diffie-Hellman key exchange.",
+    "source_url": "https://thequantuminsider.com/2026/04/06/how-quantum-computing-affects-cryptography/",
+    "source_name": "web_search",
+    "source_type": "general_web",
+    "retrieved_at": "2026-08-10T06:39:59.417679+00:00",
+    "quality_score": 0.35,
+    "sub_topic": ""
+  },
+  {
+    "claim_id": "2b093c7e",
+    "claim_text": "Quantum computers can break RSA and ECC encryption, compromising secure communications, authentication, and data integrity.",
+    "source_url": "https://thequantuminsider.com/2026/04/06/how-quantum-computing-affects-cryptography/",
+    "source_name": "web_search",
+    "source_type": "general_web",
+    "retrieved_at": "2026-08-10T06:39:59.417679+00:00",
+    "quality_score": 0.35,
+    "sub_topic": ""
+  },
+  {
+    "claim_id": "d0b58eb1",
+    "claim_text": "The quantum threat poses an existential threat to the encryption algorithms that protect everything from personal communications to national security secrets.",
+    "source_url": "https://thequantuminsider.com/2026/04/06/how-quantum-computing-affects-cryptography/",
+    "source_name": "web_search",
+    "source_type": "general_web",
+    "retrieved_at": "2026-08-10T06:39:59.417679+00:00",
+    "quality_score": 0.35,
+    "sub_topic": ""
+  },
+  {
+    "claim_id": "20eed25e",
+    "claim_text": "Quantum computers breaking RSA and ECC threatens the security of government, enterprise, and critical infrastructure.",
+    "source_url": "https://thequantuminsider.com/2026/04/06/how-quantum-computing-affects-cryptography/",
+    "source_name": "web_search",
+    "source_type": "general_web",
+    "retrieved_at": "2026-08-10T06:39:59.417679+00:00",
+    "quality_score": 0.35,
+    "sub_topic": ""
+  }
+]

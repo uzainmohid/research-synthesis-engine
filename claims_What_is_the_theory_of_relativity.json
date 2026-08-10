@@ -1,0 +1,82 @@
+[
+  {
+    "claim_id": "8ea8c5f0",
+    "claim_text": "The special theory of relativity, or simply special relativity, is a scientific theory of the relationship between space and time.",
+    "source_url": "https://en.wikipedia.org/wiki/Special_relativity",
+    "source_name": "wikipedia",
+    "source_type": "encyclopedia",
+    "retrieved_at": "2026-08-10T12:10:56.513388+00:00",
+    "quality_score": 0.6,
+    "sub_topic": ""
+  },
+  {
+    "claim_id": "21418988",
+    "claim_text": "In Albert Einstein's 1905 paper 'On the Electrodynamics of Moving Bodies', the theory is presented as being based on just two postulates.",
+    "source_url": "https://en.wikipedia.org/wiki/Special_relativity",
+    "source_name": "wikipedia",
+    "source_type": "encyclopedia",
+    "retrieved_at": "2026-08-10T12:10:56.513388+00:00",
+    "quality_score": 0.6,
+    "sub_topic": ""
+  },
+  {
+    "claim_id": "dc0454fb",
+    "claim_text": "The laws of physics are invariant (identical) in all inertial frames of reference, known as the principle of relativity.",
+    "source_url": "https://en.wikipedia.org/wiki/Special_relativity",
+    "source_name": "wikipedia",
+    "source_type": "encyclopedia",
+    "retrieved_at": "2026-08-10T12:10:56.513388+00:00",
+    "quality_score": 0.6,
+    "sub_topic": ""
+  },
+  {
+    "claim_id": "9ca22668",
+    "claim_text": "The speed of light in vacuum is the same for all observers, regardless of the motion of light source or observer, known as the principle of light constancy.",
+    "source_url": "https://en.wikipedia.org/wiki/Special_relativity",
+    "source_name": "wikipedia",
+    "source_type": "encyclopedia",
+    "retrieved_at": "2026-08-10T12:10:56.513388+00:00",
+    "quality_score": 0.6,
+    "sub_topic": ""
+  },
+  {
+    "claim_id": "53af4f23",
+    "claim_text": "Relativity is a theorem formulated by Albert Einstein, which states that space and time are relative, and all motion must be relative to a frame of reference.",
+    "source_url": "https://en.wikipedia.org/wiki/Theory_of_relativity",
+    "source_name": "web_search",
+    "source_type": "general_web",
+    "retrieved_at": "2026-08-10T12:10:56.513943+00:00",
+    "quality_score": 0.35,
+    "sub_topic": ""
+  },
+  {
+    "claim_id": "07da2b82",
+    "claim_text": "The natural world allows no 'privileged' frames of reference.",
+    "source_url": "https://en.wikipedia.org/wiki/Theory_of_relativity",
+    "source_name": "web_search",
+    "source_type": "general_web",
+    "retrieved_at": "2026-08-10T12:10:56.513943+00:00",
+    "quality_score": 0.35,
+    "sub_topic": ""
+  },
+  {
+    "claim_id": "7bfbbc6b",
+    "claim_text": "As long as an object is moving in a straight line at a constant speed (that is, with no acceleration), the laws of physics are the same for everyone.",
+    "source_url": "https://en.wikipedia.org/wiki/Theory_of_relativity",
+    "source_name": "web_search",
+    "source_type": "general_web",
+    "retrieved_at": "2026-08-10T12:10:56.513943+00:00",
+    "quality_score": 0.35,
+    "sub_topic": ""
+  },
+  {
+    "claim_id": "fb3b5671",
+    "claim_text": "Satellite-based measurement needs to take into account relativistic effects, as each satellite is in motion relative to an Earth-bound user, and is thus in a different frame of reference under the theory of relativity.",
+    "source_url": "https://en.wikipedia.org/wiki/Theory_of_relativity",
+    "source_name": "web_search",
+    "source_type": "general_web",
+    "retrieved_at": "2026-08-10T12:10:56.513943+00:00",
+    "quality_score": 0.35,
+    "sub_topic": ""
+  }
+]
